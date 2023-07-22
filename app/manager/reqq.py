@@ -139,6 +139,8 @@ def compare_options(options):
     global current_options
     is_change = False
     print("compare_options", options)
+    if options is None:
+        return
     for k, v in options.items():
         if (current_options.get(k) != v):
             is_change = True
